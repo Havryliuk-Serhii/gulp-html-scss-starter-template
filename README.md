@@ -1,2 +1,2 @@
 # gulp-html-scss-starter-template
-this template not finished
+this template is not finished

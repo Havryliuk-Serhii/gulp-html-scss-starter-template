@@ -17,7 +17,7 @@ gulp.task('server',  function() {
     	server: {baseDir: './dist/'}
     });
 
-    gulp.watch('assets/*.html').on('change', browserSync.reload);
+    gulp.watch('assets/*.html', gulp.series('copy:html')).on('change', browserSync.reload);
     gulp.watch('assets/scss/**/*.scss', gulp.series('scss'));
     gulp.watch('assets/js/**/*.js', gulp.series('copy:js'));
     gulp.watch('assets/libs/**/*.*', gulp.series('copy:libs'));
